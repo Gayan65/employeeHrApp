@@ -10,7 +10,6 @@ namespace Company
     {
         public Manager(string name, DateTime dateOfBirth, int stock) : base(name, dateOfBirth)
         {
-            Console.WriteLine("Now {0} object accessed", GetType().Name);
             Stock = stock;
         }
 
@@ -18,7 +17,7 @@ namespace Company
 
         public override string? ToString()
         {
-            return base.ToString() + String.Format(" - Stock : {0}", Stock);
+            return base.ToString() + String.Format(" - STOCK OPTION : {0}", Stock);
         }
     }
 }

@@ -11,7 +11,6 @@ namespace Company
       
         public Salesperson(string name, DateTime dateOfBirth, double bonus) : base(name, dateOfBirth)
         {
-            Console.WriteLine("Now {0} object accessed", GetType().Name);
             Bonus = bonus;
         }
 
@@ -19,7 +18,7 @@ namespace Company
 
         public override string? ToString()
         {
-            return base.ToString() + String.Format(" - Bonus : {0}", Bonus);
+            return base.ToString() + String.Format(" - BONUS : {0}%", Bonus);
         }
     }
 }

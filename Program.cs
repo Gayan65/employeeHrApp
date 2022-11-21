@@ -45,7 +45,7 @@ do
     //OUTPUT ONLY "S", "M", "N" LETTERS
     do
     {
-        Console.Write("Are you Salesperson (S), Manager (M), None of the Above (N) : ");
+        Console.Write("Are you Salesperson-(S), Manager-(M), None of the Above-(N) : ");
         userEmp = Console.ReadLine().ToUpper();
         if (String.IsNullOrWhiteSpace(userEmp) || !(userInputFormateLetterS.IsMatch(userEmp) || userInputFormateLetterM.IsMatch(userEmp) || userInputFormateLetterN.IsMatch(userEmp)) || userEmp.Length > 1)
             Console.Write("Invalid ! ");
@@ -91,77 +91,9 @@ do
         more = false;
 } while (more);
 
-//if (employees.Count > 0 && salespersons.Count == 0 && managers.Count == 0)
-//{
-//    // DISPLAY OF THE EMPLOYEE LIST
-//    Console.WriteLine("****** EMPLOYEES LIST ******");
-//    foreach (var item in employees)
-//    {
-//        Console.WriteLine("{0}", item);
-//    }
+Console.WriteLine("");
 
-//}
-//else if (salespersons.Count > 0 && managers.Count == 0)
-//{
-//    // DISPLAY OF THE EMPLOYEE LIST
-//    Console.WriteLine("****** EMPLOYEES LIST ******");
-//    foreach (var item in employees)
-//    {
-//        Console.WriteLine("{0}", item);
-//    }
-//    Console.WriteLine("");
-//    // DISPLAY OF THE SALES PERSON LIST
-//    Console.WriteLine("**** SALESPERSONS LIST *****");
-//    foreach (var item in salespersons)
-//    {
-//        Console.WriteLine("{0}", item);
-//    }
-
-//}
-//else if (managers.Count > 0 && salespersons.Count == 0)
-//{
-//    // DISPLAY OF THE EMPLOYEE LIST
-//    Console.WriteLine("****** EMPLOYEES LIST ******");
-//    foreach (var item in employees)
-//    {
-//        Console.WriteLine("{0}", item);
-//    }
-//    Console.WriteLine("");
-//    // DISPLAY OF THE MANAGERS LIST
-//    Console.WriteLine("****** MANANEGERS LIST *****");
-//    foreach (var item in managers)
-//    {
-//        Console.WriteLine("{0}", item);
-//    }
-//}
-//else if (managers.Count > 0 && salespersons.Count > 0)
-//{
-//    // DISPLAY OF THE EMPLOYEE LIST
-//    Console.WriteLine("****** EMPLOYEES LIST ******");
-//    foreach (var item in employees)
-//    {
-//        Console.WriteLine("{0}", item);
-//    }
-//    Console.WriteLine("");
-//    // DISPLAY OF THE SALES PERSON LIST
-//    Console.WriteLine("**** SALESPERSONS LIST *****");
-//    foreach (var item in salespersons)
-//    {
-//        Console.WriteLine("{0}", item);
-//    }
-//    Console.WriteLine("");
-//    // DISPLAY OF THE MANAGERS LIST
-//    Console.WriteLine("****** MANANEGERS LIST *****");
-//    foreach (var item in managers)
-//    {
-//        Console.WriteLine("{0}", item);
-//    }
-//}
-//else
-//{
-//    Console.WriteLine("No item to be displayed");
-//}
-
+// DISPLAY OF THE EMPLOYEE LIST
 Console.WriteLine("****** EMPLOYEES LIST ******");
 if (employees.Count > 0)
 {
@@ -173,7 +105,10 @@ if (employees.Count > 0)
 else
     Console.WriteLine("No data to display");
 
+Console.WriteLine("");
 
+
+// DISPLAY OF THE MANAGERS LIST
 Console.WriteLine("****** MANANEGERS LIST *****");
 if (managers.Count > 0)
 {
@@ -185,6 +120,10 @@ if (managers.Count > 0)
 else
     Console.WriteLine("No data to display");
 
+Console.WriteLine("");
+
+
+// DISPLAY OF THE SALES PERSON LIST
 Console.WriteLine("**** SALESPERSONS LIST *****");
 if (salespersons.Count > 0)
 {

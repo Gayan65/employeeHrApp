@@ -10,7 +10,6 @@ namespace Company
     {
         public Employee(string name, DateTime dateOfBirth)
         {
-            Console.WriteLine("Now {0} object accessed", GetType().Name);
             Name = name;
             DateOfBirth = dateOfBirth;
         }
@@ -20,7 +19,7 @@ namespace Company
 
         public override string? ToString()
         {
-            return String.Format("{0} - {1} ", Name, DateOfBirth.ToString("D"));
+            return String.Format("NAME : {0} - DATE OF BIRTH : {1} ", Name, DateOfBirth.ToString("D"));
         }
     }
 }
